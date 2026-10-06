@@ -1,0 +1,29 @@
+{
+	"name": "ESP-IDF QEMU",
+	"image": "espressif/idf:${imageVariant}",
+	"containerEnv": {
+		"LC_ALL": "C.UTF-8",
+		"ENV LANG": "C.UTF-8"
+	},
+	"postCreateCommand": {
+		"01-Update": "apt-get update -y && apt-get install udev -y",
+		"02-Fix": "echo \"source /opt/esp/idf/export.sh > /dev/null 2>&1\" >> ~/.bashrc",
+		"03-Copy" : "mkdir -p ~/.espressif/tools && cp .devcontainer/eim_idf.json ~/.espressif/tools/eim_idf.json",
+		"04-Create-Blank" : "cp -r .devcontainer/blank/. /workspaces/${projectName} && echo \"\nproject(${projectName})\" >> /workspaces/${projectName}/CMakeLists.txt"
+	},
+	"postStartCommand": "/opt/esp/entrypoint.sh",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"espressif.esp-idf-extension",
+				"espressif.esp-idf-web",
+				"ms-vscode.cmake-tools",
+				"ms-vscode.cpptools"
+			],
+			"settings": {
+				"terminal.integrated.defaultProfile.linux": "bash"
+			}
+		}
+	},
+	"runArgs": ["--privileged"]
+}
