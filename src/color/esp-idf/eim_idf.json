@@ -1,0 +1,16 @@
+{
+  "gitPath": "/usr/bin/git",
+  "idfInstalled": [
+    {
+      "activationScript": "/opt/esp/idf/export.sh",
+      "id": "esp-idf-container",
+      "idfToolsPath": "/opt/esp",
+      "name": "ESP-IDF (container)",
+      "path": "/opt/esp/idf",
+      "python": "/opt/esp/python_env/idf6.2_py3.12_env/bin/python"
+    }
+  ],
+  "idfSelectedId": "esp-idf-container",
+  "eimPath": "/root/.espressif/eim/eim_v0.19.0",
+  "version": "3.0"
+}

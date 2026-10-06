@@ -1,29 +1,36 @@
 {
-    "id": "color",
-    "version": "1.0.0",
-    "name": "My Favorite Color",
-    "description": "A Template to remind you of your favorite color",
-    "documentationURL": "https://github.com/devcontainers/template-starter/tree/main/src/color",
-    "licenseURL": "https://github.com/devcontainers/template-starter/blob/main/LICENSE",
+    "id": "esp-idf",
+    "version": "0.0.1",
+    "name": "Blank ESP-IDF Environment",
+    "description": "A template to create a new blank esp-idf project in a dev container",
+    "documentationURL": "https://github.com/T0ng5/esp-idf/tree/main/src/color",
+    "licenseURL": "https://github.com/T0ng5/esp-idf/blob/main/LICENSE",
     "options": {
         "imageVariant": {
             "type": "string",
-            "description": "Debian version (use bullseye on local arm64/Apple Silicon):",
-            "proposals": [
-                "bullseye",
-                "buster"
-            ],
-            "default": "bullseye"
+			"description": "ESP-IDF version",
+			"enum": [
+				"latest",
+                "release-v6.1",
+                "release-v6.0",
+                "release-v5.5",
+				"release-v5.4",
+				"release-v5.3",
+				"release-v5.2",
+				"release-v5.1",
+				"release-v5.0",
+				"release-v4.4",
+				"release-v4.3",
+				"release-v4.2",
+				"release-v4.1",
+				"release-v4.0",
+				"release-v3.3"
+			],
+			"default": "latest"
         },
-        "favorite": {
+        "projectName": {
             "type": "string",
-            "description": "Choose your favorite color.",
-            "proposals": [
-                "red",
-                "gold",
-                "green"
-            ],
-            "default": "red"
+            "description": "Name for the new project"
         }
     },
     "platforms": [
