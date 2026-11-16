@@ -1,6 +1,6 @@
 {
     "id": "esp-idf",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "name": "Blank ESP-IDF Environment",
     "description": "A template to create a new blank esp-idf project in a dev container",
     "documentationURL": "https://github.com/T0ng5/esp-idf/tree/main/src/esp-idf",
