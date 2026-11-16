@@ -1,6 +1,6 @@
 {
     "id": "esp-idf",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "name": "Blank ESP-IDF Environment",
     "description": "A template to create a new blank esp-idf project in a dev container",
     "documentationURL": "https://github.com/T0ng5/esp-idf/tree/main/src/esp-idf",
@@ -28,10 +28,11 @@
 			],
 			"default": "latest"
         },
-        "projectName": {
+        "projectFolderName": {
             "type": "string",
-            "description": "Name for the new project",
-            "default": "New_ESP-IDF_Project"
+            "description": "Name of the folder for the new project",
+            "proposals": ["esp32-webapp", "heltec-wifi-scanner"],
+            "default": "NewProject"
         }
     },
     "platforms": [

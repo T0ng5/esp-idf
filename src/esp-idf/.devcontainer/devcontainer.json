@@ -5,11 +5,13 @@
 		"LC_ALL": "C.UTF-8",
 		"ENV LANG": "C.UTF-8"
 	},
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/${templateOption:projectFolderName} ,type=bind",
+    "workspaceFolder": "/workspaces/${templateOption:projectFolderName} ",
 	"postCreateCommand": {
 		"01-Update": "apt-get update -y && apt-get install udev -y",
 		"02-Fix": "echo \"source /opt/esp/idf/export.sh > /dev/null 2>&1\" >> ~/.bashrc",
 		"03-Copy" : "mkdir -p ~/.espressif/tools && cp .devcontainer/eim_idf.json ~/.espressif/tools/eim_idf.json",
-		"04-Create-Blank" : "cp --no-clobber -r .devcontainer/blank/. /workspaces/${templateOption:projectName} && echo \"\nproject(${templateOption:projectName})\" >> /workspaces/${templateOption:projectName}/CMakeLists.txt"
+		"04-Create-Blank" : "cp --update=none -r .devcontainer/blank/. /workspaces/${templateOption:projectFolderName} && echo \"\nproject(${templateOption:projectFolderName})\" >> /workspaces/${templateOption:projectFolderName}/CMakeLists.txt"
 	},
 	"postStartCommand": "/opt/esp/entrypoint.sh",
 	"customizations": {
