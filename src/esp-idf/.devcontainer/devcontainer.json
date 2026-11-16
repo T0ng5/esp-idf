@@ -5,7 +5,7 @@
 		"LC_ALL": "C.UTF-8",
 		"ENV LANG": "C.UTF-8"
 	},
-    "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/${templateOption:projectFolderName} ,type=bind",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/${templateOption:projectFolderName},type=bind",
     "workspaceFolder": "/workspaces/${templateOption:projectFolderName}",
 	"postCreateCommand": {
 		"01-Update": "apt-get update -y && apt-get install udev -y",
