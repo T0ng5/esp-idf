@@ -3,7 +3,7 @@
     "version": "0.0.2",
     "name": "Blank ESP-IDF Environment",
     "description": "A template to create a new blank esp-idf project in a dev container",
-    "documentationURL": "https://github.com/T0ng5/esp-idf/tree/main/src/color",
+    "documentationURL": "https://github.com/T0ng5/esp-idf/tree/main/src/esp-idf",
     "licenseURL": "https://github.com/T0ng5/esp-idf/blob/main/LICENSE",
     "options": {
         "imageVariant": {
@@ -30,7 +30,8 @@
         },
         "projectName": {
             "type": "string",
-            "description": "Name for the new project"
+            "description": "Name for the new project",
+            "default": "New_ESP-IDF_Project"
         }
     },
     "platforms": [
