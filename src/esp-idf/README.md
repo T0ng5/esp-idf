@@ -8,7 +8,7 @@ A template to create a new blank esp-idf project in a dev container
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
 | imageVariant | ESP-IDF version | string | latest |
-| projectName | Name for the new project | string | undefined |
+| projectFolderName | Name of the folder for the new project | string | NewProject |
 
 
 
